@@ -1,0 +1,49 @@
+<!-- <html>
+    <head>
+        <body>
+            <ol>
+                <li><%= params[:mon1] %> </li>
+            </ol>
+        </body>
+    </head>
+</html>
+-->
+
+<!--<table>-->
+<!--    <thead>-->
+<!--        <th> 이미지 </th>-->
+<!--        <th> 타이틀 </th>-->
+<!--        <th> 링크 </th>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+        
+        <!-- tr이 한 뭉터기이므로, 여기서 반복처리를 해줘야함.-->
+<!--        <% @daum_webtoon.each do |toon| %>-->
+<!--        <tr>-->
+<!--            <td<img src="<%= toon["image"] %>"></td>-->
+<!--            <td><%= toon["title"] %></td>-->
+<!--            <td><a href="<%= toon["link"] %>">보러가기</a></td>-->
+<!--        </tr>-->
+<!--        <% end %>   <!-- 눈에 보이지 않음 -->-->
+<!--    </tbody>-->
+<!--</table>-->
+
+<table>
+    <thead>
+        <th>이미지</th>
+        <th>제목</th>
+        <th>링크</th>
+    </thead>
+    <tbody>
+        <% @daum_webtoon.each do |toon|%>
+        <tr>
+            <td><img src ="<%= toon["image"]%>"></td>
+            <td><%= toon["title"]%></td>
+            <td><a href ="<%= toon["link"]%>">보러가기</a></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+<h1><%=@daum%><h1>
+
+
